@@ -4,9 +4,9 @@
     <style name="Theme.Nihoru" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/accent</item>
         <item name="colorPrimaryVariant">@color/accent_hover</item>
-        <item name="colorOnPrimary">@color/text_main</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorSurface">@color/bg_card</item>
-        <item name="colorBackground">@color/bg_main</item>
+        <item name="android:colorBackground">@color/bg_main</item>
         <item name="android:windowBackground">@color/bg_main</item>
         <item name="android:statusBarColor">@color/bg_main</item>
         <item name="android:navigationBarColor">@color/bg_main</item>
@@ -16,36 +16,24 @@
     <style name="Theme.Nihoru.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/accent_light</item>
         <item name="colorPrimaryVariant">@color/accent_hover</item>
-        <item name="colorOnPrimary">@color/text_main_light</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorSurface">@color/bg_card_light</item>
-        <item name="colorBackground">@color/bg_main_light</item>
+        <item name="android:colorBackground">@color/bg_main_light</item>
         <item name="android:windowBackground">@color/bg_main_light</item>
         <item name="android:statusBarColor">@color/bg_main_light</item>
         <item name="android:navigationBarColor">@color/bg_main_light</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <!-- Card style -->
-    <style name="NihoruCard" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">@color/bg_card</item>
-        <item name="strokeColor">@color/border</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardElevation">0dp</item>
-    </style>
-
-    <!-- Button style -->
     <style name="NihoruButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/accent</item>
-        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="cornerRadius">10dp</item>
         <item name="android:paddingTop">14dp</item>
         <item name="android:paddingBottom">14dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <!-- Secondary Button -->
     <style name="NihoruButtonSecondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/border</item>
         <item name="android:textColor">@color/text_main</item>
