@@ -1,0 +1,38 @@
+name: Extract and Clean Up Zip
+
+on:
+  workflow_dispatch: # Manual run korar jonno
+
+jobs:
+  unzip_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Unzip NihoruAndroid.zip
+        run: |
+          if [ -f "NihoruAndroid.zip" ]; then
+            # Root directory-te extract kora hocche
+            unzip NihoruAndroid.zip -d ./
+            
+            # Zip file-ti delete kora hocche
+            rm NihoruAndroid.zip
+            echo "Extraction complete and zip deleted."
+          else
+            echo "Error: NihoruAndroid.zip khuje paoya jayni!"
+            exit 1
+          fi
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add .
+          git commit -m "Auto-extract NihoruAndroid.zip and cleanup"
+          git push
+          
