@@ -1,4 +1,4 @@
-# 🎌 Nihoru Android App
+#  Nihoru Android App
 
 Native Android app version of [nihoru.top](https://nihoru.top) — The Ultimate Anime List Converter.
 
