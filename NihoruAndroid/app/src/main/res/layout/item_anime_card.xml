@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="10dp">
+
+    <!-- Cover Image -->
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="65dp"
+        android:layout_height="95dp"
+        android:scaleType="centerCrop"
+        android:background="@color/bg_input"
+        android:layout_marginEnd="12dp"/>
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_main"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"/>
+
+        <!-- English Title -->
+        <TextView
+            android:id="@+id/tv_title_eng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Meta Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:flexWrap="wrap">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:background="@drawable/tag_bg"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_episodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- Status buttons: CW, C, PTW, OH, D -->
+            <LinearLayout
+                android:id="@+id/ll_status_buttons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/input_bg"
+                android:padding="2dp">
+
+                <Button android:id="@+id/btn_status_cw"
+                    android:layout_width="0dp" android:layout_height="28dp"
+                    android:layout_weight="1" android:text="CW"
+                    android:textSize="10sp" android:background="@drawable/status_btn_bg"
+                    android:textColor="@color/text_muted"/>
+
+                <Button android:id="@+id/btn_status_c"
+                    android:layout_width="0dp" android:layout_height="28dp"
+                    android:layout_weight="1" android:text="C"
+                    android:textSize="10sp" android:background="@drawable/status_btn_bg"
+                    android:textColor="@color/text_muted"/>
+
+                <Button android:id="@+id/btn_status_ptw"
+                    android:layout_width="0dp" android:layout_height="28dp"
+                    android:layout_weight="1" android:text="PTW"
+                    android:textSize="10sp" android:background="@drawable/status_btn_active_bg"
+                    android:textColor="@color/text_main"/>
+
+                <Button android:id="@+id/btn_status_oh"
+                    android:layout_width="0dp" android:layout_height="28dp"
+                    android:layout_weight="1" android:text="OH"
+                    android:textSize="10sp" android:background="@drawable/status_btn_bg"
+                    android:textColor="@color/text_muted"/>
+
+                <Button android:id="@+id/btn_status_d"
+                    android:layout_width="0dp" android:layout_height="28dp"
+                    android:layout_weight="1" android:text="D"
+                    android:textSize="10sp" android:background="@drawable/status_btn_bg"
+                    android:textColor="@color/text_muted"/>
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp">
+
+                <ImageButton
+                    android:id="@+id/btn_prequel"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/action_btn_bg"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:tint="#F59E0B"
+                    android:contentDescription="Add prequel"
+                    android:layout_marginEnd="2dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_sequel"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/action_btn_bg"
+                    android:src="@android:drawable/ic_media_next"
+                    android:tint="#8B5CF6"
+                    android:contentDescription="Add sequel"
+                    android:layout_marginEnd="2dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/action_btn_bg"
+                    android:src="@android:drawable/ic_menu_delete"
+                    android:tint="@color/error"
+                    android:contentDescription="Delete"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

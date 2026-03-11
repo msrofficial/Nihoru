@@ -1,0 +1,6 @@
+-keep class top.nihoru.app.data.model.** { *; }
+-keep class top.nihoru.app.network.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn okhttp3.**
+-dontwarn okio.**
